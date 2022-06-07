@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+          <h2>clculator</h2>
+        <div id="res">0</div>
+        <div class="key">
+            
+            <div class="chenge">
+              <input type="checkbox" id="chenge">
+              <label onclick="chengestyle()" for="chenge"></label>
+             </div>
+             <span onclick="clean(this)" class="c">c</span>
+            <span onclick="nemayesh(this)" class="division">/</span>
+            <span onclick="nemayesh(this)" class="seven">7</span>
+            <span onclick="nemayesh(this)" class="eight">8</span>
+            <span onclick="nemayesh(this)" class="nine">9</span>
+            <span onclick="nemayesh(this)" class="times">*</span>
+            <span onclick="nemayesh(this)" class="four">4</span>
+            <span onclick="nemayesh(this)" class="five">5</span>
+            <span onclick="nemayesh(this)" class="six">6</span>
+            <span onclick="nemayesh(this)" class="minus">-</span>
+            <span onclick="nemayesh(this)" class="one">1</span>
+            <span onclick="nemayesh(this)" class="two">2</span>
+            <span onclick="nemayesh(this)" class="three">3</span>
+            <span onclick="nemayesh(this)" class="plus">+</span>
+            <span onclick="nemayesh(this)" class="zero">0</span>
+            <span onclick="nemayesh(this)" class="decimal">.</span>
+            <span onclick="calculate()" class="equal">=</span>
+        </div>
+    </div>
+</body>
+<script>
+   let theme = "light"
+   let res =document.getElementById("res")
+    function chengestyle(){
+      if (theme=="light"){
+        document.documentElement.style.setProperty("--bg1", "#0a0c3d");
+        document.documentElement.style.setProperty("--bg2", "#E8E9F1");
+        document.documentElement.style.setProperty("--color1", "#fff");
+        theme = "dark"
+        console.log(theme)
+       }
+     else{
+        document.documentElement.style.setProperty("--bg1", "#E8E9F1");
+        document.documentElement.style.setProperty("--bg2", "#0a0c3d");
+        document.documentElement.style.setProperty("--color1", "#222");
+        theme="light"
+        console.log(theme)
+       }
+    }
+
+    function nemayesh(self){
+     let y = self.innerHTML
+     console.log(y)
+     if(res.innerHTML==0){
+    res.innerHTML= y
+    }
+    else {
+      res.innerHTML+=y
+    }
+  }
+
+    function calculate() {
+  let p = document.getElementById("res").innerHTML;
+  let q = eval(p);
+  document.getElementById("res").innerHTML = q;
+}
+
+    function clean(){
+      document.getElementById("res").innerHTML=0
+    }
+</script>
+</html>

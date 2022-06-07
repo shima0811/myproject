@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  
+    --color1 : #222;
+    --color2 : #ff612c;
+    --bg1 :#E8E9F1;
+    --bg2:#0a0c3d;
+    
+    
+}
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--bg1);
+    display: flex;
+    padding:30px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    box-shadow:var(--bg2) 0px  0px 20px;
+    h2{
+        color: var(--bg2);
+    }
+    >#res {
+        width: 100%;
+        height: 160px;
+        margin:30px 0;
+        box-shadow: var(--bg2) 0px 0px 14px ;
+        color: var(--bg2);
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .key {
+        position: relative;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: " chenge chenge c division"
+                                "seven eight nine times"
+                                "four five six minus"
+                                "one two three plus"
+                                "zero zero decimal equal";
+        span{
+            height: 60px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: skewX(-5deg);
+            box-shadow: var(--bg2) 0px 0px 5px;
+            border-radius: 50%;
+            color: var(--color1);
+            font-size: 25px;
+            
+        }                        
+
+        .chenge{
+            position: relative;
+            grid-area: chenge;
+            width:120px;
+          height: 60px;
+          box-shadow:var(--bg2) 0px 0px 5px; 
+          transform: skew(-5deg);
+          border-radius: 60px;
+          background-color: var(--bg1);
+            input[type=checkbox] {
+                visibility: hidden;
+                &:checked+label {
+                    left: 60px;
+                    background-color:#fff;
+    
+                }
+            }
+    
+        label {
+            display: block;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            position: absolute;
+            top:0px;
+            z-index: 1;
+            left: 0px;
+            background: var(--bg2);
+            border-radius: 50px;
+            transition: all 0.4s ease;
+        }
+    
+        }
+        .c {
+            grid-area: c;
+        }
+
+        .division {
+            grid-area:division;
+            color: var(--color2);
+        }
+
+        .seven {
+            grid-area: seven;
+        }
+
+        .eight {
+            grid-area: eight;
+        }
+
+        .nine {
+            grid-area: nine;
+        }
+
+        .times {
+            grid-area: times;
+            color: var(--color2);
+        }
+
+        .four {
+            grid-area: four;
+        }
+
+        .five {
+            grid-area: five;
+        }
+
+        .six {
+            grid-area: six;
+        }
+
+        .minus {
+            grid-area: minus;
+            color: var(--color2);
+        }
+
+        .one {
+            grid-area: one;
+        }
+
+        .two {
+            grid-area: two;
+        }
+
+        .three {
+            grid-area: three;
+        }
+
+        .plus {
+            grid-area: plus;
+            color: var(--color2);
+        }
+
+        .zero {
+            grid-area: zero;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .decimal {
+            grid-area: decimal;
+        }
+
+        .equal {
+            grid-area: equal;
+            color: var(--bg1);
+            background-color: var(--color2);
+        }
+    }
+
+    
+}

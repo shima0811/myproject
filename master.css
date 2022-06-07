@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --color1: #222;
+  --color2: #ff612c;
+  --bg1:#E8E9F1;
+  --bg2:#0a0c3d;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--bg1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  width: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 20px;
+  -webkit-box-shadow: var(--bg2) 0px 0px 20px;
+          box-shadow: var(--bg2) 0px 0px 20px;
+}
+
+.container h2 {
+  color: var(--bg2);
+}
+
+.container > #res {
+  width: 100%;
+  height: 160px;
+  margin: 30px 0;
+  -webkit-box-shadow: var(--bg2) 0px 0px 14px;
+          box-shadow: var(--bg2) 0px 0px 14px;
+  color: var(--bg2);
+  font-size: 20px;
+  padding: 20px;
+}
+
+.container .key {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  gap: 15px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas: " chenge chenge c division" "seven eight nine times" "four five six minus" "one two three plus" "zero zero decimal equal";
+}
+
+.container .key span {
+  height: 60px;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: skewX(-5deg);
+          transform: skewX(-5deg);
+  -webkit-box-shadow: var(--bg2) 0px 0px 5px;
+          box-shadow: var(--bg2) 0px 0px 5px;
+  border-radius: 50%;
+  color: var(--color1);
+  font-size: 25px;
+}
+
+.container .key .chenge {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: chenge;
+  width: 120px;
+  height: 60px;
+  -webkit-box-shadow: var(--bg2) 0px 0px 5px;
+          box-shadow: var(--bg2) 0px 0px 5px;
+  -webkit-transform: skew(-5deg);
+          transform: skew(-5deg);
+  border-radius: 60px;
+  background-color: var(--bg1);
+}
+
+.container .key .chenge input[type=checkbox] {
+  visibility: hidden;
+}
+
+.container .key .chenge input[type=checkbox]:checked + label {
+  left: 60px;
+  background-color: #fff;
+}
+
+.container .key .chenge label {
+  display: block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  left: 0px;
+  background: var(--bg2);
+  border-radius: 50px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.container .key .c {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: c;
+}
+
+.container .key .signed {
+  grid-area: signed;
+}
+
+.container .key .percent {
+  grid-area: percent;
+}
+
+.container .key .division {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: division;
+  color: var(--color2);
+}
+
+.container .key .seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.container .key .eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.container .key .nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.container .key .times {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: times;
+  color: var(--color2);
+}
+
+.container .key .four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.container .key .five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.container .key .six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.container .key .minus {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: minus;
+  color: var(--color2);
+}
+
+.container .key .one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.container .key .two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.container .key .three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.container .key .plus {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: plus;
+  color: var(--color2);
+}
+
+.container .key .zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: zero;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.container .key .decimal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: decimal;
+}
+
+.container .key .equal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: equal;
+  color: var(--bg1);
+  background-color: var(--color2);
+}
+/*# sourceMappingURL=master.css.map */
